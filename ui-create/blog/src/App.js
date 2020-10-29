@@ -76,7 +76,7 @@ function App() {
       </AppBar>
       <Box className={classes.hero}>
         <Box>
-          From dev to the World
+          JavaScript
         </Box>
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
