@@ -5,13 +5,15 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
-import ImgCover from './image/img-cover.jpg';
-import { Card, Grid } from '@material-ui/core';
+import { Avatar, Card, Grid } from '@material-ui/core';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+
+import AvatarVinicius from './image/avatar-vinicius.jpg';
+import ImgCover from './image/img-cover.jpg';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -27,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    color: "#fff",
+    color: "#9ca9b3",
     fontSize: "4rem",
 
   },
@@ -35,13 +37,26 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(3)
   },
   blogTitle: {
-    fontWeight: 800,
+    fontWeight: 700,
     paddingBottom: theme.spacing(3),
-    color: "#fff"
+    color: "#9ca9b3"
   },
   cardArticle: {
     backgroundColor: "#25282c",
-    color: "#9ca9b3"
+    color: "#9ca9b3",
+    maxWidth: "100%"
+  },
+  cardActions: {
+    display: "flex",
+    margin: "0 10px",
+    justifyContent: "space-between"
+  },
+  author: {
+    display: "flex",
+
+  },
+  date: {
+    color: "#4f5355"
   }
 }));
 
@@ -82,22 +97,27 @@ function App() {
                     A guide to using ReactJS
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Here I present a practical guide on React JS, the famous “omnipresent framework”, as the community likes to call it, for being so present in our day to day applications.
+                  Airbnb releases visx 1.0, the React Core Team writes about the new JSX Transform, and the complete guide to Next.js authentication.
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+              <CardActions className={classes.cardActions}>
+                <Box className={classes.author}>
+                  <Avatar src={AvatarVinicius} />
+                  <Box ml={2}>
+                    <Typography variant="subtitle2" component="p">
+                      Vinicius Anchieta
+                    </Typography>
+                    <Typography className={classes.date} variant="subtitle2" color="textSecondary" component="p">
+                      October 29, 2020
+                    </Typography>
+                  </Box>
+                </Box>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.cardArticle}>
+            <Card className={classes.cardArticle}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -111,22 +131,27 @@ function App() {
                     A guide to using NextJS
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Here I present a practical guide on React JS, the famous “omnipresent framework”, as the community likes to call it, for being so present in our day to day applications.
+                    This is a newsletter focused about Next.js, which is a modern React framework, combining a dual backend and frontend JavaScript API into a single project.
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+              <CardActions className={classes.cardActions}>
+                <Box className={classes.author}>
+                  <Avatar src={AvatarVinicius} />
+                  <Box ml={2}>
+                    <Typography variant="subtitle2" component="p">
+                      Vinicius Anchieta
+                    </Typography>
+                    <Typography className={classes.date} variant="subtitle2" color="textSecondary" component="p">
+                      October 24, 2020
+                    </Typography>
+                  </Box>
+                </Box>
               </CardActions>
             </Card>
           </Grid>
           <Grid item xs={12} sm={6} md={4}>
-          <Card className={classes.cardArticle}>
+            <Card className={classes.cardArticle}>
               <CardActionArea>
                 <CardMedia
                   component="img"
@@ -140,17 +165,21 @@ function App() {
                     A guide to using NodeJS
                   </Typography>
                   <Typography variant="body2" component="p">
-                    Here I present a practical guide on React JS, the famous “omnipresent framework”, as the community likes to call it, for being so present in our day to day applications.
-                  </Typography>
+                  Technology progresses at such a breakneck pace that keeping up with it requires dedicated and ongoing effort.</Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+              <CardActions className={classes.cardActions}>
+                <Box className={classes.author}>
+                  <Avatar src={AvatarVinicius} />
+                  <Box ml={2}>
+                    <Typography variant="subtitle2" component="p">
+                      Vinicius Anchieta
+                    </Typography>
+                    <Typography className={classes.date} variant="subtitle2" color="textSecondary" component="p">
+                      October 20, 2020
+                    </Typography>
+                  </Box>
+                </Box>
               </CardActions>
             </Card>
           </Grid>
