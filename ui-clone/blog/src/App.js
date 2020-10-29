@@ -15,6 +15,8 @@ import Button from '@material-ui/core/Button';
 import AvatarVinicius from './image/avatar-vinicius.jpg';
 import ImgCover from './image/img-cover.jpg';
 
+import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "#25282c"
@@ -68,7 +70,7 @@ function App() {
       <AppBar className={classes.appBar} position="static">
         <Toolbar>
           <Typography variant="h6" color="primary">
-            BlogDev
+            Newsletter
           </Typography>
         </Toolbar>
       </AppBar>
@@ -97,7 +99,7 @@ function App() {
                     A guide to using ReactJS
                   </Typography>
                   <Typography variant="body2" component="p">
-                  Airbnb releases visx 1.0, the React Core Team writes about the new JSX Transform, and the complete guide to Next.js authentication.
+                    Airbnb releases visx 1.0, the React Core Team writes about the new JSX Transform, and the complete guide to Next.js authentication.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -112,6 +114,9 @@ function App() {
                       October 29, 2020
                     </Typography>
                   </Box>
+                </Box>
+                <Box>
+                  <BookmarkBorderIcon />
                 </Box>
               </CardActions>
             </Card>
@@ -147,6 +152,9 @@ function App() {
                     </Typography>
                   </Box>
                 </Box>
+                <Box>
+                  <BookmarkBorderIcon />
+                </Box>
               </CardActions>
             </Card>
           </Grid>
@@ -165,7 +173,7 @@ function App() {
                     A guide to using NodeJS
                   </Typography>
                   <Typography variant="body2" component="p">
-                  Technology progresses at such a breakneck pace that keeping up with it requires dedicated and ongoing effort.</Typography>
+                    Technology progresses at such a breakneck pace that keeping up with it requires dedicated and ongoing effort.</Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions className={classes.cardActions}>
@@ -179,6 +187,9 @@ function App() {
                       October 20, 2020
                     </Typography>
                   </Box>
+                </Box>
+                <Box>
+                  <BookmarkBorderIcon />
                 </Box>
               </CardActions>
             </Card>
