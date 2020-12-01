@@ -11,6 +11,9 @@ interface Props {
 const Section: React.FC<Props> = ({variant, title, description}) => {
     return (
         <Container className={variant}>
+            <HeaderWrapper>
+                
+            </HeaderWrapper>
             <Content>
                 <h2>{title}</h2>
                 <p>{description}</p>
