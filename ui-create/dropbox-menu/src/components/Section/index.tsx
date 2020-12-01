@@ -1,6 +1,6 @@
 import { title } from 'process';
 import React from 'react';
-import { Container, Content } from './styles';
+import { Container, HeaderWrapper, Header, DropboxLogo, Content } from './styles';
 
 interface Props {
     variant: 'blue' | 'beige' | 'white' | 'black';
@@ -8,11 +8,18 @@ interface Props {
     description: string;
 }
 
-const Section: React.FC<Props> = ({variant, title, description}) => {
+const Section: React.FC<Props> = ({ variant, title, description }) => {
     return (
         <Container className={variant}>
             <HeaderWrapper>
-                
+                <Header>
+                    <h1>
+                        <DropboxLogo />
+                        <span>DropBox</span>
+                    </h1>
+
+                    <button>Interagir</button>
+                </Header>
             </HeaderWrapper>
             <Content>
                 <h2>{title}</h2>
