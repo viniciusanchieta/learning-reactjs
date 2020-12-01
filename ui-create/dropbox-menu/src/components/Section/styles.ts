@@ -39,19 +39,64 @@ export const Container = styled.div`
         
         @media(min-width: 1024px){
             --content-width:         50%;
-            --heading-font-size:    71px;
+            --heading-font-size:     71px;
         }
     }
 
     background: var(--bg-color);
-    position: relative
+    position:   relative;
 `;
 
 export const HeaderWrapper = styled.div`
-    position: absolute;
+    position:   absolute;
+    top:        0;
+    left:       0;
+    right:      0;
+    bottom:     0;
+
+    clip: rect(auto, auto, auto, auto);
 `;
 
-export const Header = styled.div``;
+export const Header = styled.header`
+    z-index:    3;
+    background: var(--bg-color);
+
+    display:            flex;
+    justify-content:    space-between;
+
+    max-width:  1440px;
+    margin:     0 auto;
+    padding:    16px 32px;
+
+    > h1{
+        display:        flex;
+        align-items:    center;
+
+        > span{
+            color:          var(--text-color);
+            margin-left:    10px;
+            font-size:      26px;
+        }
+    }
+
+    > button{
+        color:      var(--text-color);
+        background: none;
+        border:none;
+        outline: none;
+        font-size: 16px;
+
+        &:hover, &:focus{
+            text-decoration: underline;
+        }
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+`;
 
 export const DropboxLogo = styled(FaDropbox)`
     width: 36px;
